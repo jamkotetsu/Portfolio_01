@@ -1,0 +1,194 @@
+body {
+    width: 100%;  
+}
+
+img {
+    max-width: 100%;
+}
+
+.item_img {
+    text-align: center;
+}
+
+.item_img img {
+    width: 200px; /* 画像の幅を指定 */
+    height: 200px; /* 画像の高さを指定 */
+    object-fit: contain;
+}
+
+
+li {
+    list-style-type: none;
+}
+
+/* 
+② カウント表示
+*/
+
+.hidden {
+    display: none;
+}
+
+
+/*
+header
+*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color: #fff;
+    background-color: lightsalmon;
+}
+
+header h1 {
+    font-size: 30px;
+}
+
+header .cart {
+    position: relative;
+}
+
+header .cart .cart_cnt {
+    position: absolute;
+    top: -4px;
+    left: -12px;
+    width: 1.2rem;
+    height: 1.2rem;
+    font-size: 0.6rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.2rem;
+    border-radius: 50%;
+    background-color: #fff;
+    color: lightsalmon;
+    opacity: 0.9;
+}
+
+
+/*
+main
+*/
+
+main {
+    padding: 20px;
+}
+
+.item_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.item {
+    width: 20%;
+    padding: 10px;
+    margin: 10px;
+    border: solid 2px lightsalmon;
+    border-radius: 3%;
+}
+
+
+.item_img {
+    margin: 1rem;
+}
+
+.item_textbox {
+    font-size: 1.2rem;
+}
+
+.item_title {
+    color: #333132;
+}
+
+.item_price {
+    text-align: right;
+    font-size: 1.2rem;
+    color: #333132;
+}
+
+.item_btnarea {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 1rem 0;
+}
+
+.item_cart_btn {
+    font-size: 1.2rem;
+    padding: 4px 1.2rem;
+    border-radius: 20px;
+    border: none;
+    color: #fff;
+    background-color: lightsalmon;
+    cursor: pointer;
+}
+
+/* ③ カートボタンをクリックしたアクティブにする */
+.item_cart_btn_active {
+    background-color: #006F86;
+}
+
+
+.item_buy_btn {
+    padding: 9px 1.6rem;
+    border-radius: 20px;
+    color: #fff;
+    background-color: lightsalmon;
+    text-decoration: none;
+
+}
+
+/*
+footer
+*/
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: #fff;
+    background-color: lightsalmon;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+footer ul {
+    display: flex
+}
+
+footer li {
+    padding-right: 15px;
+}
+
+footer img {
+    width: 20px;
+}
+
+
+/*
+レスポンシブデザイン
+*/
+@media screen and (max-width: 1024px) {
+    .item_list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .item {
+        width: 40%;
+    }
+}
+
+
+@media screen and (max-width: 620px) {
+    .item_list .item {
+        width: calc(100% / 2);
+    }
+}

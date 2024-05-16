@@ -1,0 +1,110 @@
+body {
+    color: lightsalmon;
+    padding: 1rem;
+}
+
+ul { 
+    list-style: none;
+}
+
+/* header */
+
+header a {
+    color: lightsalmon;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+/* main */
+
+main {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.container {
+    padding: 1.5rem 0;
+    margin: 3rem auto;
+    border: solid 2px lightsalmon;
+    border-radius: 10px;
+}
+
+.container h1 {
+    padding-bottom: 1.5rem;
+    text-align: center;
+    font-size: 1.7rem;
+}
+
+.container .total {
+    width: 96%;
+    margin: auto;
+    padding-top: 1.4rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    color: #333132;
+}
+
+.container .total_title {
+    font-weight: bold;
+}
+
+.container .confirm_btn {
+    display: block;
+    margin: auto;
+    padding: 4px 1.2rem;
+    font-size: 1.3rem;
+    background-color: lightsalmon;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* 商品追加された時 */
+
+.container h2 {
+    font-size: 1.2rem;
+    color: #333132;
+}
+
+.container .shopping_list li {
+    width: 96%;
+    margin: auto;
+    padding: 1rem 0;
+    border-top: 1.2px solid lightsalmon;
+}
+
+.container .shopping_list li:last-of-type {
+    border-bottom: 1.2px solid lightsalmon;
+}
+.container .price {
+    font-size: 1.2rem;
+    text-align: right;
+    color: #333132;
+}
+
+.container .price::before {
+    content: '\00a5';
+    font-size: 1.2rem;
+}
+
+
+/* レスポンシブデザイン */
+@media screen and ( max-width :480px ) {
+
+    header a {
+        font-size: 1rem;
+    }
+
+    .container .total,
+    .container .price,
+    .container .shopping_list h2,
+    .container .price::before {
+        font-size: 1.2rem;
+    }
+
+    
+}

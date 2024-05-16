@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermarket</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Supermarket</h1>
+        <div class="cart">
+            <!-- ② カウント表示 -->
+            <!-- classにhiddenをつけて、初期状態では表示をしないようにする -->
+            <div class="cart_cnt hidden">
+                <span id="js_cart_cnt"></span>
+            </div>
+
+            <a href="confirm.html">
+                <img src="img/cart.png" alt="#">
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <div class="wrapper">
+            <ul class="item_list">
+                <!-- トマト -->
+                <li class="item">
+                    <div class="item_img">
+                        <img src="img/tomato.jpeg" alt="トマト">
+                    </div>
+                    <div class="item_textbox">
+                        <div class="item_title"><h2>トマト</h2></div>
+                        <div class="item_price"><span class="yen_symbol">¥</span><span class="js_get_price">150</span></div>
+                        <div class="item_btnarea">
+                            <!-- ⑥ ローカルストレージに保存するため、カートボタンの属性にdata-nameとdate-priceを持たせる -->
+                            <button class="item_cart_btn js_cart_btn" data-name="トマト" data-price="150">カート</button>
+                            <a class="item_buy_btn" href="confirm.html">購入</a>
+                        </div>
+                    </div>
+                </li>
+                <!-- ここまで -->
+                <!-- きゅうり -->
+                <li class="item">
+                    <div class="item_img">
+                        <img src="img/cucumber.jpeg" alt="きゅうり">
+                    </div>
+                    <div class="item_textbox">
+                        <div class="item_title"><h2>きゅうり</h2></div>
+                        <div class="item_price"><span class="yen_symbol">¥</span><span class="js_get_price">100</span></div>
+                        <div class="item_btnarea">
+                            <button class="item_cart_btn js_cart_btn" data-name="きゅうり" data-price="100">カート</button>
+                            <a class="item_buy_btn" href="confirm.html">購入</a>
+                        </div>
+                    </div>
+                </li>
+                <!-- ここまで -->
+                <!-- にんじん -->
+                <li class="item">
+                    <div class="item_img">
+                        <img src="img/carrot.jpg" alt="にんじん">
+                    </div>
+                    <div class="item_textbox">
+                        <div class="item_title"><h2>にんじん</h2></div>
+                        <div class="item_price"><span class="yen_symbol">¥</span><span class="js_get_price">170</span></div>
+                        <div class="item_btnarea">
+                            <button class="item_cart_btn js_cart_btn" data-name="にんじん" data-price="170">カート</button>
+                            <a class="item_buy_btn" href="confirm.html">購入</a>
+                        </div>
+                    </div>
+                </li>
+                <!-- ここまで -->
+                <!-- ジャガイモ -->
+                <li class="item">
+                    <div class="item_img">
+                        <img src="img/potato.jpeg" alt="ジャガイモ">
+                    </div>
+                    <div class="item_textbox">
+                        <div class="item_title"><h2>ジャガイモ</h2></div>
+                        <div class="item_price"><span class="yen_symbol">¥</span><span class="js_get_price">200</span></div>
+                        <div class="item_btnarea">
+                            <button class="item_cart_btn js_cart_btn" data-name="ジャガイモ" data-price="200">カート</button>
+                            <a class="item_buy_btn" href="confirm.html">購入</a>
+                        </div>
+                    </div>
+                </li>
+                <!-- ここまで -->
+                <!-- 鶏肉 -->
+                <li class="item">
+                    <div class="item_img">
+                        <img src="img/chicken.jpg" alt="鶏肉">
+                    </div>
+                    <div class="item_textbox">
+                        <div class="item_title"><h2>鶏肉</h2></div>
+                        <div class="item_price"><span class="yen_symbol">¥</span><span class="js_get_price">580</span></div>
+                        <div class="item_btnarea">
+                            <button class="item_cart_btn js_cart_btn" data-name="鶏肉" data-price="580">カート</button>
+                            <a class="item_buy_btn" href="confirm.html">購入</a>
+                        </div>
+                    </div>
+                </li>
+                <!-- ここまで -->
+                <!-- 豚肉 -->
+                <li class="item">
+                    <div class="item_img">
+                        <img src="img/pork.jpg" alt="豚肉">
+                    </div>
+                    <div class="item_textbox">
+                        <div class="item_title"><h2>豚肉</h2></div>
+                        <div class="item_price"><span class="yen_symbol">¥</span><span class="js_get_price">490</span></div>
+                        <div class="item_btnarea">
+                            <button class="item_cart_btn js_cart_btn" data-name="豚肉" data-price="490">カート</button>
+                            <a class="item_buy_btn" href="confirm.html">購入</a>
+                        </div>
+                    </div>
+                </li>
+                <!-- ここまで -->
+                <!-- 牛肉 -->
+                <li class="item">
+                    <div class="item_img">
+                        <img src="img/beef.jpg" alt="牛肉">
+                    </div>
+                    <div class="item_textbox">
+                        <div class="item_title"><h2>牛肉</h2></div>
+                        <div class="item_price"><span class="yen_symbol">¥</span><span class="js_get_price">610</span></div>
+                        <div class="item_btnarea">
+                            <button class="item_cart_btn js_cart_btn" data-name="牛肉" data-price="610">カート</button>
+                            <a class="item_buy_btn" href="confirm.html">購入</a>
+                        </div>
+                    </div>
+                </li>
+                <!-- ここまで -->
+                <!-- はちみつ -->
+                <li class="item">
+                    <div class="item_img">
+                        <img src="img/honey.webp" alt="はちみつ">
+                    </div>
+                    <div class="item_textbox">
+                        <div class="item_title"><h2>はちみつ</h2></div>
+                        <div class="item_price"><span class="yen_symbol">¥</span><span class="js_get_price">380</span></div>
+                        <div class="item_btnarea">
+                            <button class="item_cart_btn js_cart_btn" data-name="はちみつ" data-price="380">カート</button>
+                            <a class="item_buy_btn" href="confirm.html">購入</a>
+                        </div>
+                    </div>
+                </li>
+                <!-- ここまで -->
+                <!-- ボトル -->
+                <li class="item">
+                    <div class="item_img">
+                        <img src="img/bottle.jpeg" alt="ボトル">
+                    </div>
+                    <div class="item_textbox">
+                        <div class="item_title"><h2>ボトル</h2></div>
+                        <div class="item_price"><span class="yen_symbol">¥</span><span class="js_get_price">1200</span></div>
+                        <div class="item_btnarea">
+                            <button class="item_cart_btn js_cart_btn" data-name="ボトル" data-price="1200">カート</button>
+                            <a class="item_buy_btn" href="confirm.html">購入</a>
+                        </div>
+                    </div>
+                </li>
+                <!-- ここまで -->
+                <!-- 洗剤 -->
+                <li class="item">
+                    <div class="item_img">
+                        <img src="img/detargent.jpg" alt="洗剤">
+                    </div>
+                    <div class="item_textbox">
+                        <div class="item_title"><h2>洗剤</h2></div>
+                        <div class="item_price"><span class="yen_symbol">¥</span><span class="js_get_price">400</span></div>
+                        <div class="item_btnarea">
+                            <button class="item_cart_btn js_cart_btn" data-name="洗剤" data-price="400">カート</button>
+                            <a class="item_buy_btn" href="confirm.html">購入</a>
+                        </div>
+                    </div>
+                </li>
+                <!-- ここまで -->
+                <!-- スポンジ -->
+                <li class="item">
+                    <div class="item_img">
+                        <img src="img/sponge.jpeg" alt="スポンジ">
+                    </div>
+                    <div class="item_textbox">
+                        <div class="item_title"><h2>スポンジ</h2></div>
+                        <div class="item_price"><span class="yen_symbol">¥</span><span class="js_get_price">90</span></div>
+                        <div class="item_btnarea">
+                            <button class="item_cart_btn js_cart_btn" data-name="スポンジ" data-price="90">カート</button>
+                            <a class="item_buy_btn" href="confirm.html">購入</a>
+                        </div>
+                    </div>
+                </li>
+                <!-- ここまで -->
+                <!-- トイレットペーパー -->
+                <li class="item">
+                    <div class="item_img">
+                        <img src="img/toiletpaper.jpg" alt="トイレットペーパー">
+                    </div>
+                    <div class="item_textbox">
+                        <div class="item_title"><h2>トイレットペーパー</h2></div>
+                        <div class="item_price"><span class="yen_symbol">¥</span><span class="js_get_price">600</span></div>
+                        <div class="item_btnarea">
+                            <button class="item_cart_btn js_cart_btn" data-name="トイレットペーパー" data-price="600">カート</button>
+                            <a class="item_buy_btn" href="confirm.html">購入</a>
+                        </div>
+                    </div>
+                </li>
+                <!-- ここまで -->
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p> © 2024 Mau All Rights Reserved</p>
+        <ul>
+            <li><a href="https://www.instagram.com/"><img src="img/Instagram_Glyph_White.png" alt="インスタグラム"></a></li>
+            <li><a href="https://twitter.com/xjapanofficial?lang=ja"><img src="img/logo-white.png" alt="X"></a></li>
+            <li><a href="https://www.facebook.com/"><img src="img/Facebook_Logo_Secondary.png" alt="フェイスブック"></a></li>
+        </ul>
+    </footer>
+
+</body>
+
+</html>
