@@ -193,7 +193,7 @@ footer img {
     }
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 411px){
     .item_buy_btn {
         font-size: 1.1rem;
     }
