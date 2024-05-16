@@ -192,3 +192,15 @@ footer img {
         width: calc(100% / 2);
     }
 }
+
+@media screen and (max-width: 400px){
+    .item_buy_btn {
+        font-size: 1.1rem;
+    }
+
+    .item_cart_btn {
+        font-size: 0.9rem;
+        height: 2.3rem;
+        width: 50%;
+    }
+}
