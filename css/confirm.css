@@ -1,5 +1,5 @@
 body {
-    color: lightsalmon;
+    color: #B99A86;
     padding: 1rem;
 }
 
@@ -10,7 +10,7 @@ ul {
 /* header */
 
 header a {
-    color: lightsalmon;
+    color: #B99A86;
     font-size: 1.2rem;
     font-weight: bold;
     text-decoration: none;
@@ -27,7 +27,7 @@ main {
 .container {
     padding: 1.5rem 0;
     margin: 3rem auto;
-    border: solid 2px lightsalmon;
+    border: solid 2px #B99A86;
     border-radius: 10px;
 }
 
@@ -56,7 +56,7 @@ main {
     margin: auto;
     padding: 4px 1.2rem;
     font-size: 1.3rem;
-    background-color: lightsalmon;
+    background-color: #B99A86;
     color: #fff;
     border: none;
     border-radius: 20px;
@@ -74,11 +74,11 @@ main {
     width: 96%;
     margin: auto;
     padding: 1rem 0;
-    border-top: 1.2px solid lightsalmon;
+    border-top: 1.2px solid #B99A86;
 }
 
 .container .shopping_list li:last-of-type {
-    border-bottom: 1.2px solid lightsalmon;
+    border-bottom: 1.2px solid #B99A86;
 }
 .container .price {
     font-size: 1.2rem;
