@@ -21,6 +21,13 @@ li {
     list-style-type: none;
 }
 
+.section-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+
 /* 
 ② カウント表示
 */
@@ -30,25 +37,49 @@ li {
 }
 
 
-/*
-header
-*/
+/*-------------------------------------------
+ヘッダー
+-------------------------------------------*/
 
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
     color: #fff;
-    background-color: lightsalmon;
+    background-color:#F0DECE;
+    z-index: 100;
 }
 
-header h1 {
-    font-size: 30px;
+header .logo {
+    width: 20%;
+}
+
+header nav {
+    font-weight: bold;
+    margin-left: 45%;
+}
+
+header ul {
+    display: flex;
+    padding: 10px 0;
+}
+
+header li {
+    margin-left: 40px;
+}
+
+header a {
+    text-decoration: none; /* テキストの下線を消す */
+    color: black;
 }
 
 header .cart {
     position: relative;
+    width: 30px;
+    margin-right: 10px;
 }
 
 header .cart .cart_cnt {
@@ -63,17 +94,73 @@ header .cart .cart_cnt {
     line-height: 1.2rem;
     border-radius: 50%;
     background-color: #fff;
-    color: lightsalmon;
+    color: black;
     opacity: 0.9;
 }
 
 
-/*
-main
-*/
+/*-------------------------------------------
+メインビジュアル
+-------------------------------------------*/
+.mainvisual {
+    width: 100%; /* 幅を100%に設定 */
+}
+  
+.mainvisual img {
+    width: 100%; /* 画像の幅を100%に設定 */
+    max-width: 1920px;
+    height: 900px;
+    object-fit: fill;
+    padding-top: 55px;
+}
 
-main {
-    padding: 20px;
+/*-------------------------------------------
+プロフィール
+-------------------------------------------*/
+#profile {
+    background-color: #F0DECE;
+    padding-top: 100px; /* 上に余白を追加 */
+    padding-bottom: 60px; /* 下に余白を追加 */
+}
+
+#profile .jam,.kotetsu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+#profile img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin-right: 100px;
+}
+
+#profile .text {
+    text-align: left;
+}
+
+#profile li {
+    margin-bottom: 20px;
+}
+
+.content-title {
+    font-size: 1.2rem;
+    margin: 30px 0;
+}
+
+
+/*-------------------------------------------
+Photo Shop
+-------------------------------------------*/
+#photoshop {
+    padding-top: 100px; /* 上に余白を追加 */
+}
+
+.wrapper {
+    padding-bottom: 60px;
+    background-color: #F9F8F7;
 }
 
 .item_list {
@@ -83,31 +170,56 @@ main {
 }
 
 .item {
+    position: relative;
     width: 20%;
     padding: 10px;
     margin: 10px;
-    border: solid 2px lightsalmon;
     border-radius: 3%;
 }
 
 
-.item_img {
-    margin: 1rem;
+.item_img img{
+    width: 100%; /* 画像の幅を100%に設定 */
+    height: auto; /* 画像の高さを自動調整 */
+    object-fit: contain; /* 画像が収まるように調整 */
 }
 
 .item_textbox {
-    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column; /* 子要素を縦に並べる */
+    align-items: center; /* 子要素を横方向に中央揃え */
+    justify-content: center; /* 子要素を縦方向に中央揃え */
+    padding: 20px;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    display: none; /* 初期状態では非表示 */
+}
+
+.item:hover .item_textbox {
+    display: flex; /* ホバー時に表示 */
 }
 
 .item_title {
+    margin-right: 10px;
     color: #333132;
 }
 
 .item_price {
-    text-align: right;
+    text-align: left;
     font-size: 1.2rem;
     color: #333132;
 }
+
+.item_title_price {
+    display: flex;
+    justify-content: space-between;
+}
+  
 
 .item_btnarea {
     display: flex;
@@ -122,7 +234,7 @@ main {
     border-radius: 20px;
     border: none;
     color: #fff;
-    background-color: lightsalmon;
+    background-color: #DDA268;
     cursor: pointer;
 }
 
@@ -131,30 +243,21 @@ main {
     background-color: #006F86;
 }
 
-
-.item_buy_btn {
-    padding: 9px 1.6rem;
-    border-radius: 20px;
-    color: #fff;
-    background-color: lightsalmon;
-    text-decoration: none;
-
-}
-
-/*
+/*-------------------------------------------
 footer
-*/
+-------------------------------------------*/
 
 footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    color: #fff;
-    background-color: lightsalmon;
+    color: black;
+    background-color: #F0DECE;
 }
 
 footer p {
+    font-weight: bold;
     font-size: 0.9rem;
 }
 
@@ -171,10 +274,15 @@ footer img {
 }
 
 
-/*
-レスポンシブデザイン
-*/
+/*-------------------------------------------
+レスポンシブ
+-------------------------------------------*/
 @media screen and (max-width: 1024px) {
+
+    header .logo {
+        width: 25%; /* ロゴの幅を25%に設定 */
+    }
+
     .item_list {
         display: flex;
         flex-wrap: wrap;
@@ -186,14 +294,41 @@ footer img {
     }
 }
 
+@media screen and (max-width: 800px) {
+    header .logo {
+        width: 200px; /* ロゴの幅を30%に設定 */
+    }
 
-@media screen and (max-width: 620px) {
-    .item_list .item {
-        width: calc(100% / 2);
+    .mainvisual img {
+        width: 100%; /* 画像の幅を100%に設定 */
+        height: auto; /* 高さを自動調整 */
+        object-fit: cover; /* 画像をコンテナの大きさに合わせてカバー */
     }
 }
 
+
+@media screen and (max-width: 620px) {
+
+    header .logo {
+        width: 500px /* ロゴの幅を40%に設定 */
+    }
+    
+    .item_list .item {
+        width: calc(100% / 2);
+    }
+
+    #profile .content .jam, .kotetsu {
+        flex-direction: column;
+    }
+}
+
+
 @media screen and (max-width: 411px){
+
+    header .logo {
+        width: 40%; /* ロゴの幅を40%に設定 */
+    }
+
     .item_buy_btn {
         font-size: 1.1rem;
     }
@@ -204,3 +339,4 @@ footer img {
         width: 50%;
     }
 }
+
