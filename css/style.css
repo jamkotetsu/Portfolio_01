@@ -103,14 +103,13 @@ header .cart .cart_cnt {
 -------------------------------------------*/
 .mainvisual {
     width: 100%; /* 幅を100%に設定 */
+    padding-top: 55px;
 }
   
 .mainvisual img {
     width: 100%; /* 画像の幅を100%に設定 */
-    max-width: 1920px;
     height: 900px;
-    object-fit: fill;
-    padding-top: 55px;
+    object-fit: cover;
 }
 
 /*-------------------------------------------
