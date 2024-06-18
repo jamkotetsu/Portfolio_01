@@ -1,305 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JAM&KOTETSU</title>
-    <link rel="icon" href="img/logo_1.jpg">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <script src="js/script.js"></script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JAM&KOTETSU</title>
+        <link rel="icon" href="img/logo_1.jpg">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <script src="js/script.js"></script>
+    </head>
 
-<body>
-    <header>
-        <div class="logo">
-            <img src="img/logo_2.png" alt="logo">
-        </div>
-        <nav>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="img/logo_2.png" alt="logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#profile">PROFILE</a></li>
+                    <li><a href="#photoshop">PHOTO SHOP</a></li>
+                </ul>
+            </nav>
+            <div class="cart">
+                <!-- ② カウント表示 -->
+                <!-- classにhiddenをつけて、初期状態では表示をしないようにする -->
+                <div class="cart_cnt hidden">
+                    <span id="js_cart_cnt"></span>
+                </div>
+
+                <a href="confirm.html">
+                    <img src="img/cart_logo.png" alt="#">
+                </a>
+            </div>
+        </header>
+
+        <main>
+            <!-- メインビジュアル -->
+            <div class="mainvisual">
+                <img src="img/mainvisual.jpg" alt="mainvisual">
+            </div>
+
+            <!-- プロフィール -->
+            <div id="profile">
+                <h2 class="section-title">PROFILE</h2>
+                
+                <div class="content">
+                    <div class="jam">
+                        <img src="img/jam.jpg" alt="ジャム">
+                        <div class="text">
+                            <h3 class="content-title">JAM</h3>
+                            <ul>
+                                <li>性別:♂</li>
+                                <li>年齢:15歳</li>
+                                <li>毛色:レッド</li>
+                                <li>性格:好奇心旺盛/よく食べる</li>
+                                <li>特技:匂いを嗅ぐ</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="kotetsu">
+                        <img src="img/kotetsu.jpg" alt="コテツ">
+                        <div class="text">
+                            <h3 class="content-title">KOTETSU</h3>
+                            <ul>
+                                <li>性別:♂</li>
+                                <li>年齢:10歳</li>
+                                <li>毛色:レッド</li>
+                                <li>性格:警戒心強い/猫っぽい</li>
+                                <li>特技:高速スピン</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                
+                <!-- Photo Shop -->
+            <div class="wrapper">
+                <div id="photoshop">
+                    <h2 class="section-title">PHOTO SHOP</h2>
+                </div>
+
+                <ul class="item_list">
+                    <!-- コテツのホホエミ -->
+                    <li class="item">
+                        <div class="item_img">
+                            <img src="img/photo01.jpg" alt="コテツのホホエミ">
+                        </div>
+                        <div class="item_textbox">
+                            <div class="item_title_price">
+                                <div class="item_title"><h2>コテツのホホエミ</h2></div>
+                                <div class="item_price"><span class="yen_symbol">¥</span><span class="js_get_price">150</span></div>
+                            </div>
+                            <div class="item_btnarea">
+                                <!-- ⑥ ローカルストレージに保存するため、カートボタンの属性にdata-nameとdate-priceを持たせる -->
+                                <button class="item_cart_btn js_cart_btn" data-name="コテツのホホエミ" data-price="150">カート</button>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- ここまで -->
+                    <!-- コテツのクマ姿 -->
+                    <li class="item">
+                        <div class="item_img">
+                            <img src="img/photo02.jpg" alt="コテツのクマ姿">
+                        </div>
+                        <div class="item_textbox">
+                            <div class="item_title_price">
+                                <div class="item_title"><h2>コテツのクマ姿</h2></div>
+                                <div class="item_price"><span class="yen_symbol">¥</span><span class="js_get_price">100</span></div>
+                            </div>
+                            <div class="item_btnarea">
+                                <button class="item_cart_btn js_cart_btn" data-name="コテツのクマ姿" data-price="100">カート</button>
+                                
+                            </div>
+                        </div>
+                    </li>
+                    <!-- ここまで -->
+                    <!-- ジャムとおもちゃ -->
+                    <li class="item">
+                        <div class="item_img">
+                            <img src="img/photo03.jpg" alt="ジャムとおもちゃ">
+                        </div>
+                        <div class="item_textbox">
+                            <div class="item_title_price">
+                                <div class="item_title"><h2>ジャムとおもちゃ</h2></div>
+                                <div class="item_price"><span class="yen_symbol">¥</span><span class="js_get_price">170</span></div>
+                            </div>
+                            <div class="item_btnarea">
+                                <button class="item_cart_btn js_cart_btn" data-name="ジャムとおもちゃ" data-price="170">カート</button>
+                                
+                            </div>
+                        </div>
+                    </li>
+                    <!-- ここまで -->
+                    <!-- ジャムのタキシード姿 -->
+                    <li class="item">
+                        <div class="item_img">
+                            <img src="img/photo04.jpg" alt="ジャムのタキシード姿">
+                        </div>
+                        <div class="item_textbox">
+                            <div class="item_title_price">
+                                <div class="item_title"><h2>ジャムのタキシード姿</h2></div>
+                                <div class="item_price"><span class="yen_symbol">¥</span><span class="js_get_price">200</span></div>
+                            </div>
+                            <div class="item_btnarea">
+                                <button class="item_cart_btn js_cart_btn" data-name="ジャムのタキシード姿" data-price="200">カート</button>
+                                
+                            </div>
+                        </div>
+                    </li>
+                    <!-- ここまで -->
+                    <!-- ヘアバンド姿のテツ -->
+                    <li class="item">
+                        <div class="item_img">
+                            <img src="img/photo05.jpg" alt="ヘアバンド姿のテツ">
+                        </div>
+                        <div class="item_textbox">
+                            <div class="item_title_price">
+                                <div class="item_title"><h2>ヘアバンド姿のテツ</h2></div>
+                                <div class="item_price"><span class="yen_symbol">¥</span><span class="js_get_price">580</span></div>
+                            </div>
+                            <div class="item_btnarea">
+                                <button class="item_cart_btn js_cart_btn" data-name="ヘアバンド姿のテツ" data-price="580">カート</button>
+                                
+                            </div>
+                        </div>
+                    </li>
+                    <!-- ここまで -->
+                    <!-- 散歩前のテツ -->
+                    <li class="item">
+                        <div class="item_img">
+                            <img src="img/photo06.jpg" alt="散歩前のテツ">
+                        </div>
+                        <div class="item_textbox">
+                            <div class="item_title_price">
+                                <div class="item_title"><h2>散歩前のテツ</h2></div>
+                                <div class="item_price"><span class="yen_symbol">¥</span><span class="js_get_price">490</span></div>
+                            </div>
+                            <div class="item_btnarea">
+                                <button class="item_cart_btn js_cart_btn" data-name="散歩前のテツ" data-price="490">カート</button>
+                                
+                            </div>
+                        </div>
+                    </li>
+                    <!-- ここまで -->
+                    <!-- あくびをするテツ -->
+                    <li class="item">
+                        <div class="item_img">
+                            <img src="img/photo07.jpg" alt="あくびをするテツ">
+                        </div>
+                        <div class="item_textbox">
+                            <div class="item_title_price">
+                                <div class="item_title"><h2>あくびをするテツ</h2></div>
+                                <div class="item_price"><span class="yen_symbol">¥</span><span class="js_get_price">610</span></div>
+                            </div>
+                            <div class="item_btnarea">
+                                <button class="item_cart_btn js_cart_btn" data-name="あくびをするテツ" data-price="610">カート</button>
+                                
+                            </div>
+                        </div>
+                    </li>
+                    <!-- ここまで -->
+                    <!-- 散歩前のジャム＆テツ -->
+                    <li class="item">
+                        <div class="item_img">
+                            <img src="img/photo08.jpg" alt="散歩前のジャム＆テツ">
+                        </div>
+                        <div class="item_textbox">
+                            <div class="item_title_price">
+                                <div class="item_title"><h2>散歩前のジャム＆テツ</h2></div>
+                                <div class="item_price"><span class="yen_symbol">¥</span><span class="js_get_price">380</span></div>
+                            </div>
+                            <div class="item_btnarea">
+                                <button class="item_cart_btn js_cart_btn" data-name="散歩前のジャム＆テツ" data-price="380">カート</button>
+                                
+                            </div>
+                        </div>
+                    </li>
+                    <!-- ここまで -->
+                    <!-- ライオンジャム -->
+                    <li class="item">
+                        <div class="item_img">
+                            <img src="img/photo09.jpg" alt="ライオンジャム">
+                        </div>
+                        <div class="item_textbox">
+                            <div class="item_title_price">
+                                <div class="item_title"><h2>ライオンジャム</h2></div>
+                                <div class="item_price"><span class="yen_symbol">¥</span><span class="js_get_price">1200</span></div>
+                            </div>
+                            <div class="item_btnarea">
+                                <button class="item_cart_btn js_cart_btn" data-name="ライオンジャム" data-price="1200">カート</button>
+                                
+                            </div>
+                        </div>
+                    </li>
+                    <!-- ここまで -->
+                    <!-- リラックスジャム -->
+                    <li class="item">
+                        <div class="item_img">
+                            <img src="img/photo10.jpg" alt="リラックスジャム">
+                        </div>
+                        <div class="item_textbox">
+                            <div class="item_title_price">
+                                <div class="item_title"><h2>リラックスジャム</h2></div>
+                                <div class="item_price"><span class="yen_symbol">¥</span><span class="js_get_price">400</span></div>
+                            </div>
+                            <div class="item_btnarea">
+                                <button class="item_cart_btn js_cart_btn" data-name="リラックスジャム" data-price="400">カート</button>
+                                
+                            </div>
+                        </div>
+                    </li>
+                    <!-- ここまで -->
+                    <!-- タキシード姿のジャム＆テツ -->
+                    <li class="item">
+                        <div class="item_img">
+                            <img src="img/photo11.jpg" alt="タキシード姿のジャム＆テツ">
+                        </div>
+                        <div class="item_textbox">
+                            <div class="item_title_price">
+                                <div class="item_title"><h2>タキシード姿のジャム＆テツ</h2></div>
+                                <div class="item_price"><span class="yen_symbol">¥</span><span class="js_get_price">90</span></div>
+                            </div>
+                            <div class="item_btnarea">
+                                <button class="item_cart_btn js_cart_btn" data-name="タキシード姿のジャム＆テツ" data-price="90">カート</button>
+                                
+                            </div>
+                        </div>
+                    </li>
+                    <!-- ここまで -->
+                    <!-- 寝そべるジャム＆テツ -->
+                    <li class="item">
+                        <div class="item_img">
+                            <img src="img/photo12.jpg" alt="寝そべるジャム＆テツ">
+                        </div>
+                        <div class="item_textbox">
+                            <div class="item_title_price">
+                                <div class="item_title"><h2>寝そべるジャム＆テツ</h2></div>
+                                <div class="item_price"><span class="yen_symbol">¥</span><span class="js_get_price">600</span></div>
+                            </div>
+                            <div class="item_btnarea">
+                                <button class="item_cart_btn js_cart_btn" data-name="寝そべるジャム＆テツ" data-price="600">カート</button>
+                                
+                            </div>
+                        </div>
+                    </li>
+                    <!-- ここまで -->
+                </ul>
+            </div>
+        </main>
+
+        <footer>
+            <p> © 2024 Mau All Rights Reserved</p>
             <ul>
-                <li><a href="#profile">PROFILE</a></li>
-                <li><a href="#photoshop">PHOTO SHOP</a></li>
+                <li><a href="https://www.instagram.com/"><img src="img/Instagram_Glyph_White.png" alt="インスタグラム"></a></li>
+                <li><a href="https://twitter.com/xjapanofficial?lang=ja"><img src="img/logo-white.png" alt="X"></a></li>
+                <li><a href="https://www.facebook.com/"><img src="img/Facebook_Logo_Secondary.png" alt="フェイスブック"></a></li>
             </ul>
-        </nav>
-        <div class="cart">
-            <!-- ② カウント表示 -->
-            <!-- classにhiddenをつけて、初期状態では表示をしないようにする -->
-            <div class="cart_cnt hidden">
-                <span id="js_cart_cnt"></span>
-            </div>
-
-            <a href="confirm.html">
-                <img src="img/cart_logo.png" alt="#">
-            </a>
-        </div>
-    </header>
-
-    <main>
-        <!-- メインビジュアル -->
-        <div class="mainvisual">
-            <img src="img/mainvisual.jpg" alt="mainvisual">
-        </div>
-
-        <!-- プロフィール -->
-        <div id="profile">
-            <h2 class="section-title">PROFILE</h2>
-            
-            <div class="content">
-                <div class="jam">
-                    <img src="img/jam.jpg" alt="ジャム">
-                    <div class="text">
-                        <h3 class="content-title">JAM</h3>
-                        <ul>
-                            <li>性別:♂</li>
-                            <li>年齢:15歳</li>
-                            <li>毛色:レッド</li>
-                            <li>性格:好奇心旺盛/よく食べる</li>
-                            <li>特技:匂いを嗅ぐ</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="kotetsu">
-                    <img src="img/kotetsu.jpg" alt="コテツ">
-                    <div class="text">
-                        <h3 class="content-title">KOTETSU</h3>
-                        <ul>
-                            <li>性別:♂</li>
-                            <li>年齢:10歳</li>
-                            <li>毛色:レッド</li>
-                            <li>性格:警戒心強い/猫っぽい</li>
-                            <li>特技:高速スピン</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-            
-            <!-- Photo Shop -->
-        <div class="wrapper">
-            <div id="photoshop">
-                <h2 class="section-title">PHOTO SHOP</h2>
-            </div>
-
-            <ul class="item_list">
-                <!-- コテツのホホエミ -->
-                <li class="item">
-                    <div class="item_img">
-                        <img src="img/photo01.jpg" alt="コテツのホホエミ">
-                    </div>
-                    <div class="item_textbox">
-                        <div class="item_title_price">
-                            <div class="item_title"><h2>コテツのホホエミ</h2></div>
-                            <div class="item_price"><span class="yen_symbol">¥</span><span class="js_get_price">150</span></div>
-                        </div>
-                        <div class="item_btnarea">
-                            <!-- ⑥ ローカルストレージに保存するため、カートボタンの属性にdata-nameとdate-priceを持たせる -->
-                            <button class="item_cart_btn js_cart_btn" data-name="コテツのホホエミ" data-price="150">カート</button>
-                        </div>
-                    </div>
-                </li>
-                <!-- ここまで -->
-                <!-- コテツのクマ姿 -->
-                <li class="item">
-                    <div class="item_img">
-                        <img src="img/photo02.jpg" alt="コテツのクマ姿">
-                    </div>
-                    <div class="item_textbox">
-                        <div class="item_title_price">
-                            <div class="item_title"><h2>コテツのクマ姿</h2></div>
-                            <div class="item_price"><span class="yen_symbol">¥</span><span class="js_get_price">100</span></div>
-                        </div>
-                        <div class="item_btnarea">
-                            <button class="item_cart_btn js_cart_btn" data-name="コテツのクマ姿" data-price="100">カート</button>
-                             
-                        </div>
-                    </div>
-                </li>
-                <!-- ここまで -->
-                <!-- ジャムとおもちゃ -->
-                <li class="item">
-                    <div class="item_img">
-                        <img src="img/photo03.jpg" alt="ジャムとおもちゃ">
-                    </div>
-                    <div class="item_textbox">
-                        <div class="item_title_price">
-                            <div class="item_title"><h2>ジャムとおもちゃ</h2></div>
-                            <div class="item_price"><span class="yen_symbol">¥</span><span class="js_get_price">170</span></div>
-                        </div>
-                        <div class="item_btnarea">
-                            <button class="item_cart_btn js_cart_btn" data-name="ジャムとおもちゃ" data-price="170">カート</button>
-                             
-                        </div>
-                    </div>
-                </li>
-                <!-- ここまで -->
-                <!-- ジャムのタキシード姿 -->
-                <li class="item">
-                    <div class="item_img">
-                        <img src="img/photo04.jpg" alt="ジャムのタキシード姿">
-                    </div>
-                    <div class="item_textbox">
-                        <div class="item_title_price">
-                            <div class="item_title"><h2>ジャムのタキシード姿</h2></div>
-                            <div class="item_price"><span class="yen_symbol">¥</span><span class="js_get_price">200</span></div>
-                        </div>
-                        <div class="item_btnarea">
-                            <button class="item_cart_btn js_cart_btn" data-name="ジャムのタキシード姿" data-price="200">カート</button>
-                             
-                        </div>
-                    </div>
-                </li>
-                <!-- ここまで -->
-                <!-- ヘアバンド姿のテツ -->
-                <li class="item">
-                    <div class="item_img">
-                        <img src="img/photo05.jpg" alt="ヘアバンド姿のテツ">
-                    </div>
-                    <div class="item_textbox">
-                        <div class="item_title_price">
-                            <div class="item_title"><h2>ヘアバンド姿のテツ</h2></div>
-                            <div class="item_price"><span class="yen_symbol">¥</span><span class="js_get_price">580</span></div>
-                        </div>
-                        <div class="item_btnarea">
-                            <button class="item_cart_btn js_cart_btn" data-name="ヘアバンド姿のテツ" data-price="580">カート</button>
-                             
-                        </div>
-                    </div>
-                </li>
-                <!-- ここまで -->
-                <!-- 散歩前のテツ -->
-                <li class="item">
-                    <div class="item_img">
-                        <img src="img/photo06.jpg" alt="散歩前のテツ">
-                    </div>
-                    <div class="item_textbox">
-                        <div class="item_title_price">
-                            <div class="item_title"><h2>散歩前のテツ</h2></div>
-                            <div class="item_price"><span class="yen_symbol">¥</span><span class="js_get_price">490</span></div>
-                        </div>
-                        <div class="item_btnarea">
-                            <button class="item_cart_btn js_cart_btn" data-name="散歩前のテツ" data-price="490">カート</button>
-                             
-                        </div>
-                    </div>
-                </li>
-                <!-- ここまで -->
-                <!-- あくびをするテツ -->
-                <li class="item">
-                    <div class="item_img">
-                        <img src="img/photo07.jpg" alt="あくびをするテツ">
-                    </div>
-                    <div class="item_textbox">
-                        <div class="item_title_price">
-                            <div class="item_title"><h2>あくびをするテツ</h2></div>
-                            <div class="item_price"><span class="yen_symbol">¥</span><span class="js_get_price">610</span></div>
-                        </div>
-                        <div class="item_btnarea">
-                            <button class="item_cart_btn js_cart_btn" data-name="あくびをするテツ" data-price="610">カート</button>
-                             
-                        </div>
-                    </div>
-                </li>
-                <!-- ここまで -->
-                <!-- 散歩前のジャム＆テツ -->
-                <li class="item">
-                    <div class="item_img">
-                        <img src="img/photo08.jpg" alt="散歩前のジャム＆テツ">
-                    </div>
-                    <div class="item_textbox">
-                        <div class="item_title_price">
-                            <div class="item_title"><h2>散歩前のジャム＆テツ</h2></div>
-                            <div class="item_price"><span class="yen_symbol">¥</span><span class="js_get_price">380</span></div>
-                        </div>
-                        <div class="item_btnarea">
-                            <button class="item_cart_btn js_cart_btn" data-name="散歩前のジャム＆テツ" data-price="380">カート</button>
-                             
-                        </div>
-                    </div>
-                </li>
-                <!-- ここまで -->
-                <!-- ライオンジャム -->
-                <li class="item">
-                    <div class="item_img">
-                        <img src="img/photo09.jpg" alt="ライオンジャム">
-                    </div>
-                    <div class="item_textbox">
-                        <div class="item_title_price">
-                            <div class="item_title"><h2>ライオンジャム</h2></div>
-                            <div class="item_price"><span class="yen_symbol">¥</span><span class="js_get_price">1200</span></div>
-                        </div>
-                        <div class="item_btnarea">
-                            <button class="item_cart_btn js_cart_btn" data-name="ライオンジャム" data-price="1200">カート</button>
-                             
-                        </div>
-                    </div>
-                </li>
-                <!-- ここまで -->
-                <!-- リラックスジャム -->
-                <li class="item">
-                    <div class="item_img">
-                        <img src="img/photo10.jpg" alt="リラックスジャム">
-                    </div>
-                    <div class="item_textbox">
-                        <div class="item_title_price">
-                            <div class="item_title"><h2>リラックスジャム</h2></div>
-                            <div class="item_price"><span class="yen_symbol">¥</span><span class="js_get_price">400</span></div>
-                        </div>
-                        <div class="item_btnarea">
-                            <button class="item_cart_btn js_cart_btn" data-name="リラックスジャム" data-price="400">カート</button>
-                             
-                        </div>
-                    </div>
-                </li>
-                <!-- ここまで -->
-                <!-- タキシード姿のジャム＆テツ -->
-                <li class="item">
-                    <div class="item_img">
-                        <img src="img/photo11.jpg" alt="タキシード姿のジャム＆テツ">
-                    </div>
-                    <div class="item_textbox">
-                        <div class="item_title_price">
-                            <div class="item_title"><h2>タキシード姿のジャム＆テツ</h2></div>
-                            <div class="item_price"><span class="yen_symbol">¥</span><span class="js_get_price">90</span></div>
-                        </div>
-                        <div class="item_btnarea">
-                            <button class="item_cart_btn js_cart_btn" data-name="タキシード姿のジャム＆テツ" data-price="90">カート</button>
-                             
-                        </div>
-                    </div>
-                </li>
-                <!-- ここまで -->
-                <!-- 寝そべるジャム＆テツ -->
-                <li class="item">
-                    <div class="item_img">
-                        <img src="img/photo12.jpg" alt="寝そべるジャム＆テツ">
-                    </div>
-                    <div class="item_textbox">
-                        <div class="item_title_price">
-                            <div class="item_title"><h2>寝そべるジャム＆テツ</h2></div>
-                            <div class="item_price"><span class="yen_symbol">¥</span><span class="js_get_price">600</span></div>
-                        </div>
-                        <div class="item_btnarea">
-                            <button class="item_cart_btn js_cart_btn" data-name="寝そべるジャム＆テツ" data-price="600">カート</button>
-                             
-                        </div>
-                    </div>
-                </li>
-                <!-- ここまで -->
-            </ul>
-        </div>
-    </main>
-
-    <footer>
-        <p> © 2024 Mau All Rights Reserved</p>
-        <ul>
-            <li><a href="https://www.instagram.com/"><img src="img/Instagram_Glyph_White.png" alt="インスタグラム"></a></li>
-            <li><a href="https://twitter.com/xjapanofficial?lang=ja"><img src="img/logo-white.png" alt="X"></a></li>
-            <li><a href="https://www.facebook.com/"><img src="img/Facebook_Logo_Secondary.png" alt="フェイスブック"></a></li>
-        </ul>
-    </footer>
-
-</body>
-
+        </footer>
+    </body>
 </html>
