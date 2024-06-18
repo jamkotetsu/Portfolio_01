@@ -110,6 +110,7 @@ header .cart .cart_cnt {
     width: 100%; /* 画像の幅を100%に設定 */
     height: 900px;
     object-fit: cover;
+    display: block;
 }
 
 /*-------------------------------------------
