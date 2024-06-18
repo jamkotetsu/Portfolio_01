@@ -11,8 +11,8 @@ img {
 }
 
 .item_img img {
-    width: 200px; /* 画像の幅を指定 */
-    height: 200px; /* 画像の高さを指定 */
+    width: 200px; 
+    height: 200px; 
     object-fit: contain;
 }
 
@@ -118,8 +118,8 @@ header .cart .cart_cnt {
 -------------------------------------------*/
 #profile {
     background-color: #F0DECE;
-    padding-top: 100px; /* 上に余白を追加 */
-    padding-bottom: 60px; /* 下に余白を追加 */
+    padding-top: 100px; 
+    padding-bottom: 60px; 
 }
 
 #profile .jam,.kotetsu{
@@ -154,7 +154,7 @@ header .cart .cart_cnt {
 Photo Shop
 -------------------------------------------*/
 #photoshop {
-    padding-top: 100px; /* 上に余白を追加 */
+    padding-top: 100px; 
 }
 
 .wrapper {
@@ -178,16 +178,16 @@ Photo Shop
 
 
 .item_img img{
-    width: 100%; /* 画像の幅を100%に設定 */
-    height: auto; /* 画像の高さを自動調整 */
-    object-fit: contain; /* 画像が収まるように調整 */
+    width: 100%; 
+    height: auto; 
+    object-fit: contain; 
 }
 
 .item_textbox {
     display: flex;
-    flex-direction: column; /* 子要素を縦に並べる */
-    align-items: center; /* 子要素を横方向に中央揃え */
-    justify-content: center; /* 子要素を縦方向に中央揃え */
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
     padding: 20px;
     position: absolute;
     background-color: rgba(255, 255, 255, 0.9);
@@ -276,10 +276,14 @@ footer img {
 /*-------------------------------------------
 レスポンシブ
 -------------------------------------------*/
-@media screen and (max-width: 1024px) {
-
-    header .logo {
-        width: 25%; /* ロゴの幅を25%に設定 */
+@media screen and (max-width: 1200px) {
+    
+    .mainvisual img {
+        height: auto; 
+    }
+    
+    .item {
+        width: 40%;
     }
 
     .item_list {
@@ -287,55 +291,40 @@ footer img {
         flex-wrap: wrap;
         justify-content: space-around;
     }
-
-    .item {
-        width: 40%;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    header .logo {
-        width: 200px; /* ロゴの幅を30%に設定 */
-    }
-
-    .mainvisual img {
-        width: 100%; /* 画像の幅を100%に設定 */
-        height: auto; /* 高さを自動調整 */
-        object-fit: cover; /* 画像をコンテナの大きさに合わせてカバー */
-    }
 }
 
 
 @media screen and (max-width: 620px) {
-
-    header .logo {
-        width: 500px /* ロゴの幅を40%に設定 */
-    }
     
     .item_list .item {
         width: calc(100% / 2);
     }
 
-    #profile .content .jam, .kotetsu {
+    .item_title_price {
+        display: flex;
         flex-direction: column;
+        align-items: center;
     }
+
+    #profile .content .jam, .kotetsu {
+        display: flex; 
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center; 
+    }
+
+    #profile img {
+        margin: 0;
+    }
+    
+    #profile .text {
+        text-align: center;
+    }
+
+    .item_title h2 {
+        padding-bottom: 10px;
+    }
+
 }
 
-
-@media screen and (max-width: 411px){
-
-    header .logo {
-        width: 40%; /* ロゴの幅を40%に設定 */
-    }
-
-    .item_buy_btn {
-        font-size: 1.1rem;
-    }
-
-    .item_cart_btn {
-        font-size: 0.9rem;
-        height: 2.3rem;
-        width: 50%;
-    }
-}
 
