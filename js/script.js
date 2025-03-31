@@ -52,34 +52,34 @@ window.onload = function () {
 
                 inactivate_btn(index);
             }
-            
+
             // ボタンのindexが配列に含まれていない場合、配列に追加
             else if (clicked.indexOf(index) == -1) {
-                
+
                 // ⑥ ローカルストレージに保存のため、カートボタンの属性にdata-nameとdate-priceを取得
                 let name = cart_btn.dataset.name;
                 let price = Number(cart_btn.dataset.price);
-                
+
                 // ⑦ ローカルストレージにデータを保存, データ保存用配列に商品データを追加(保存)
                 save_items.push({
                     id: index,
                     name: name,
                     price: price
                 });
-                
+
                 // ①押されたボタンのindexをclicked配列に追加
-                clicked.push(index); 
-                
+                clicked.push(index);
+
                 activate_btn(index);
             }
-            
+
             // ⑧,⑩ ローカルストレージの商品データをセット(上書き,保管)
             localStorage.setItem("items",JSON.stringify(save_items));
         });
     });
-    
 
-    function activate_btn(index){        
+
+    function activate_btn(index){
         // ② カウント表示(増)
         // ボタンを押されたらカートの個数アイコンを1増やす
         cart_cnt++;
@@ -89,13 +89,13 @@ window.onload = function () {
         }
         //カートの個数アイコンにカウントを出力
         cart_cnt_icon.innerHTML = cart_cnt;
-        
+
         // ③ カートボタンをクリックしたアクティブにする
         cart_btns[index].classList.add('item_cart_btn_active');
     };
-    
 
-    function inactivate_btn(index){  
+
+    function inactivate_btn(index){
         // ⑤ カウント表示(減)
         // ボタンを押されたらカートの個数アイコンを1減らす
         cart_cnt--;
@@ -105,9 +105,9 @@ window.onload = function () {
         }
         // カートの個数アイコンにカウントを出力
         cart_cnt_icon.innerHTML = cart_cnt;
-    
+
         // カートボタンをクリックした非アクティブにする
         cart_btns[index].classList.remove('item_cart_btn_active');
     };
-    
+
 };

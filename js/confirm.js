@@ -56,6 +56,8 @@ window.onload = function () {
             window.alert('カートに商品がありません')
         }
     });
+
+    document.getElementById('js_back').addEventListener('click', function() {
+    window.location.href = 'index.html#3';
+  });
 };
-
-
