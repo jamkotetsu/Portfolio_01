@@ -1,32 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>購入画面</title>
-    <link rel="icon" href="favicon.ico">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/confirm.css">
-    <script src="js/confirm.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CONFIRM - MAU’s Portfolio</title>
+  <meta name="description" content="MAUのポートフォリオサイトです。">
+  <link rel="icon" href="img/logo_1.jpg">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/confirm.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/confirm.js"></script>
 </head>
 
-<body>
-    <header>
-        <a class="back_btn" href="index.html">← 買い物に戻る</a>
-    </header>
 
-    <main>
-        <div class="container">
-            <h1>購入確認</h1>
-            <ul id="js_shopping_list" class="shopping_list"></ul>
-            <div class="total">
-                <span class="total_title">合計</span>
-                <span class="yen_symbol">¥<span id="js_total"></span></span>
-            </div>
-            <button id="js_confirm" class="confirm_btn">購入確定</button>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <div class="header-logo">
+          <a href="index.html">MAU’s Portfolio</a>
         </div>
-    </main>
+
+        <div id="drawer_toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+
+        <div class="header-nav">
+
+          <nav class="gnav" id="global_nav">
+            <ul class="gnav-list">
+              <li class="gnav-list-item"><a href="index.html">HOME</a></li>
+              <li class="gnav-list-item"><a href="index.html#1">ABOUT</a></li>
+              <li class="gnav-list-item"><a href="index.html#2">MY DOGs</a></li>
+              <li class="gnav-list-item"><a href="index.html#3">PHOTO SHOP</a></li>
+              <li class="gnav-list-item"><a href="index.html#4">CONTACT</a></li>
+            </ul>
+          </nav>
+
+          <div class="cart">
+            <!-- ② カウント表示 -->
+            <!-- classにhiddenをつけて、初期状態では表示をしないようにする -->
+            <div class="cart_cnt hidden">
+              <span id="js_cart_cnt"></span>
+            </div>
+            <a href="confirm.html" id="cartLink">
+              <img src="img/cart_logo.png" alt="#">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="confirm">
+      <div class="container">
+        <h1>CONFIRM</h1>
+        <ul id="js_shopping_list" class="shopping_list"></ul>
+        <div class="total">
+          <span class="total_title">TOTAL</span>
+          <span class="yen_symbol">¥<span id="js_total"></span></span>
+        </div>
+        <div class="button-area">
+          <button id="js_back" class="confirm_btn back">戻る</button>
+          <button id="js_confirm" class="confirm_btn">購入確定</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg--gr">
+    <p class="text-align-center"> © 2024 Mau All Rights Reserved</p>
+  </footer>
+
 </body>
 
 </html>
