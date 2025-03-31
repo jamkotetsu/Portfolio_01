@@ -1,110 +1,121 @@
-body {
-    color: #B99A86;
-    padding: 1rem;
+section.confirm {
+  margin-top: 80px;
 }
 
-ul { 
-    list-style: none;
-}
-
-/* header */
-
-header a {
-    color: #B99A86;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-
-/* main */
-
-main {
-    max-width: 980px;
-    margin: 0 auto;
-}
-
-.container {
-    padding: 1.5rem 0;
-    margin: 3rem auto;
-    border: solid 2px #B99A86;
-    border-radius: 10px;
+section.contact {
+  padding-top: 80px;
 }
 
 .container h1 {
-    padding-bottom: 1.5rem;
-    text-align: center;
-    font-size: 1.7rem;
+  padding-bottom: 1.5rem;
+  text-align: center;
+  font-size: 1.7rem;
 }
 
 .container .total {
-    width: 96%;
-    margin: auto;
-    padding-top: 1.4rem;
-    display: flex;
-    justify-content: space-between;
-    font-size: 1.2rem;
-    color: #333132;
+  width: 96%;
+  margin: auto;
+  padding-top: 1.4rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  color: #333132;
 }
 
 .container .total_title {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .container .confirm_btn {
-    display: block;
-    margin: auto;
-    padding: 4px 1.2rem;
-    font-size: 1.3rem;
-    background-color: #B99A86;
-    color: #fff;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
+  display: block;
+  padding: 4px 1.2rem;
+  font-size: 1rem;
+  background-color: #be8d5c;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.container .confirm_btn:hover {
+  background-color: #006f86;
+  transition: all 0.3s;
 }
 
 /* 商品追加された時 */
 
 .container h2 {
-    font-size: 1.2rem;
-    color: #333132;
+  font-size: 1.2rem;
+  color: #333132;
 }
 
 .container .shopping_list li {
-    width: 96%;
-    margin: auto;
-    padding: 1rem 0;
-    border-top: 1.2px solid #B99A86;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  border-top: 1.2px solid #be8d5c;
 }
 
 .container .shopping_list li:last-of-type {
-    border-bottom: 1.2px solid #B99A86;
+  border-bottom: 1.2px solid #be8d5c;
 }
 .container .price {
-    font-size: 1.2rem;
-    text-align: right;
-    color: #333132;
+  font-size: 1.2rem;
+  text-align: right;
+  color: #333132;
 }
 
 .container .price::before {
-    content: '\00a5';
-    font-size: 1.2rem;
+  content: "\00a5";
+  font-size: 1.2rem;
 }
 
+.confirm .container {
+  max-width: 800px;
+}
 
+.confirm .button-area {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.confirm .button-area button {
+  padding: 0.5rem 1rem;
+  background-color: #be8d5c;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.button-area button.back {
+  background-color: gray;
+  color: #fff;
+}
+
+.button-area button.back:hover {
+  background-color: #333;
+  transition: all 0.3s;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
 /* レスポンシブデザイン */
-@media screen and ( max-width :480px ) {
+@media screen and (max-width: 480px) {
+  header a {
+    font-size: 1rem;
+  }
 
-    header a {
-        font-size: 1rem;
-    }
-
-    .container .total,
-    .container .price,
-    .container .shopping_list h2,
-    .container .price::before {
-        font-size: 1.2rem;
-    }
-
-    
+  .container .total,
+  .container .price,
+  .container .shopping_list h2,
+  .container .price::before {
+    font-size: 1.2rem;
+  }
 }
