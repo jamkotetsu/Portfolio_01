@@ -182,3 +182,40 @@ $(document).ready(function () {
     }
   });
 });
+
+$(document).ready(function () {
+  $('.sort_btn').on('click', function () {
+    // すべてのボタンから "active" クラスを削除
+    $('.sort_btn').removeClass('active');
+    // クリックされたボタンに "active" クラスを追加
+    $(this).addClass('active');
+  });
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const cartButtons = document.querySelectorAll('.js_cart_btn');
+
+  cartButtons.forEach(function(button) {
+    button.addEventListener('click', function() {
+      const itemTextbox = this.closest('.item').querySelector('.item_textbox');
+      const itemElement = this.closest('.item'); // item要素
+
+      // 「カート」ボタンが押された場合
+      if (this.textContent === 'カート') {
+        // item_textboxを表示（ホバーに関係なく）
+        itemElement.classList.add('show-textbox');
+        // ボタンのテキストを「戻る」に変更
+        this.textContent = 'もどす';
+      }
+      // 「戻る」ボタンが押された場合
+      else if (this.textContent === 'もどす') {
+        // item_textboxを非表示にする（ホバーの挙動に戻す）
+        itemElement.classList.remove('show-textbox');
+        // ボタンのテキストを「カート」に戻す
+        this.textContent = 'カート';
+      }
+    });
+  });
+});
