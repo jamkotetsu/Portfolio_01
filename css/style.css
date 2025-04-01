@@ -447,9 +447,10 @@ Photo Shop
   transition: all 0.3s;
 }
 
-.sort_btn:hover {
+.sort_btn.active {
   background-color: #006f86;
-  transition: all 0.3s;
+  color: #fff;
+  border-color: #0056b3;
 }
 /*-------------------------------------------
 Photo Shop
@@ -520,8 +521,22 @@ Photo Shop
   display: none;
 }
 
+.item_textbox {
+  display: none; /* 初期状態では非表示 */
+  opacity: 0; /* 初期状態では透明 */
+  transition: opacity 0.3s ease;
+}
+
+.item.show-textbox .item_textbox {
+  display: flex; /* カートが押された時は常に表示 */
+  opacity: 1; /* 表示時に不透明 */
+  transition: opacity 0.3s ease; /* スムーズにフェードイン */
+}
+
 .item:hover .item_textbox {
-  display: flex;
+  display: flex; /* ホバー時にも表示 */
+  opacity: 1; /* ホバー時にも不透明 */
+  transition: opacity 0.3s ease; /* スムーズにフェードイン */
 }
 
 .item_title_price {
@@ -549,16 +564,9 @@ Photo Shop
   background-color: #dda268;
   cursor: pointer;
   min-width: 100px;
-  transition: all 0.3s;
 }
 
-.item_cart_btn:hover {
-  background-color: #006f86;
-  transition: all 0.3s;
-}
-
-/* ③ カートボタンをクリックしたアクティブにする */
-.item_cart_btn_active {
+.item_cart_btn.item_cart_btn_active {
   background-color: #006f86;
 }
 
