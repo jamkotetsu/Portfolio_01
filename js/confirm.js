@@ -48,14 +48,15 @@ window.onload = function () {
     total_ele.innerHTML = total;
 
     // ⑩ 購入が確定しました
-    confirm_btn.addEventListener('click',function () {
-        if(items) {
-            window.alert('購入が確定しました')
-            localStorage.removeItem('items')
-        } else {
-            window.alert('カートに商品がありません')
-        }
-    });
+  confirm_btn.addEventListener('click', function () {
+      if (items) {
+          window.alert('購入が確定しました');
+          localStorage.removeItem('items');
+          window.location.href = 'index.html'; // トップページのURLに変更
+      } else {
+          window.alert('カートに商品がありません');
+      }
+  });
 
     document.getElementById('js_back').addEventListener('click', function() {
     window.location.href = 'index.html#3';
